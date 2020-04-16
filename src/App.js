@@ -27,7 +27,7 @@ class App extends React.Component {
     event.preventDefault();
     const result = await axios({
       method: 'POST',
-      url: `http://localhost:9000/api/v1/numbers/?n=${this.state.value}`
+      url: `https://primebackend.herokuapp.com/api/v1/numbers/?n=${this.state.value}`
     });
     this.setState({ res: result.data.data });
     console.log(this.state);
