@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
