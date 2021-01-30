@@ -1,5 +1,4 @@
 function primeGenerator(n) {
-  let a = Date.now();
 
   let arr = [];
   for (let i = 2; i <= n; i++) {
