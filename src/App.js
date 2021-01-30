@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import AppBar from '@material-ui/core/AppBar';
+import PrimeGenerator from './primeGenerator';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,11 +26,8 @@ class App extends React.Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    const result = await axios({
-      method: 'POST',
-      url: `https://primebackend.herokuapp.com/api/v1/numbers/?n=${this.state.value}`
-    });
-    this.setState({ res: result.data.data });
+    const result = PrimeGenerator(this.state.value);
+    this.setState({ res: result });
     console.log(this.state);
   };
 
